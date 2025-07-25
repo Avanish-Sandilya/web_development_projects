@@ -1,0 +1,93 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+h3 {
+  color: #34495e;
+  margin-top: 20px;
+}
+
+/* Navigation / Home link */
+span a,
+ul li a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+span a:hover,
+ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Unordered list for index page */
+ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+/* Recipe image */
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Description paragraph */
+p {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+/* Ingredients and steps */
+ul, ol {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Responsive text */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  ul li {
+    font-size: 1em;
+  }
+}
