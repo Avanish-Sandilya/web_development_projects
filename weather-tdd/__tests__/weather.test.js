@@ -6,7 +6,6 @@ test("buildWeatherUrl returns correct endpoint for city", () => {
   const API_KEY = "testkey123";
   const url = buildWeatherUrl(city, API_KEY);
 
-  // Correctly interpolate variables
   expect(url).toBe(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
   );
