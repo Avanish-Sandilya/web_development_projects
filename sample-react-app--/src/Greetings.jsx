@@ -17,6 +17,19 @@ function AnimalList() {
   );
 }
 
+function SportsList() {
+  const sports = ["Football", "Hockey", "Cricket", "Badminton", "Hammer Throw"];
 
+  return (
+    <div>
+      <h1>Sports</h1>
+      <ul>
+        {sports.map((sport) => {
+          return <li key={sport}>{sport}</li>;
+        })}
+      </ul>
+    </div>
+  );
+}
 
-export { AnimalList, Greeting };
+export { AnimalList, Greeting, SportsList };
