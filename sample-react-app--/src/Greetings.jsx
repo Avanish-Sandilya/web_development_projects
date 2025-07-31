@@ -1,4 +1,22 @@
 function Greeting() {
   return <h1>Hello, how are you, what is up</h1>;
 }
-export default Greeting;
+
+function AnimalList() {
+  const listOfAnimals = ["Lion", "Tiger", "Dog", "Cat", "Shark"];
+
+  return (
+    <div>
+      <h1>Animals:</h1>
+      <ul>
+        {listOfAnimals.map((animal) => {
+          return <li key={animal}>{animal}</li>;
+        })}
+      </ul>
+    </div>
+  );
+}
+
+
+
+export { AnimalList, Greeting };
