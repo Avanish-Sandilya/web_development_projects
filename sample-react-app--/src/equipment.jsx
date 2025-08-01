@@ -6,7 +6,7 @@ function EquipmentList(props) {
   return (
     <ul>
       {props.EquipmentNames.map((equipment) => {
-        return <EquipmentName key={equipment} equipmentName={equipment} />
+        return equipment.startsWith('b') && <EquipmentName key={equipment} equipmentName={equipment} />
       })}
     </ul>
   );
