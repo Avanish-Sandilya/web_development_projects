@@ -6,6 +6,8 @@ import { Greeting, AnimalList, SportsList } from "./Greetings.jsx";
 import Players from "./Player.jsx";
 import Equipments from "./equipment.jsx";
 
+import Buttons from "./buttons.jsx";
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Greeting />
@@ -13,5 +15,6 @@ createRoot(document.getElementById("root")).render(
     <SportsList />
     <Players />
     <Equipments />
+    <Buttons/>
   </StrictMode>
 );
