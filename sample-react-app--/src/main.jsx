@@ -9,6 +9,7 @@ import Equipments from "./equipment.jsx";
 import Buttons from "./buttons.jsx";
 import { Redirect } from "./linkButtons.jsx";
 import Counter from "./Counter.jsx";
+import Multiplier from "./multiplier.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -20,5 +21,6 @@ createRoot(document.getElementById("root")).render(
     <Buttons/>
     <Redirect/>
     <Counter/>
+    <Multiplier/>
   </StrictMode>
 );
