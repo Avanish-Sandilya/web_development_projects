@@ -7,6 +7,7 @@ import Players from "./Player.jsx";
 import Equipments from "./equipment.jsx";
 
 import Buttons from "./buttons.jsx";
+import { Redirect } from "./linkButtons.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -16,5 +17,6 @@ createRoot(document.getElementById("root")).render(
     <Players />
     <Equipments />
     <Buttons/>
+    <Redirect/>
   </StrictMode>
 );
