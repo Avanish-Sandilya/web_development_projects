@@ -1,42 +1,155 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Base Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+  color: #2c3e50;
+}
+
+/* General Page Titles */
+h1 {
   text-align: center;
+  margin-top: 30px;
+  color: #1a1a1a;
+  font-size: 32px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Forms & Sections */
+form,
+.cv-preview {
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 30px auto;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+h2,
+h3 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+label {
+  display: block;
+  margin: 18px 0 6px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  font-size: 15px;
+  margin-top: 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+/* CV Preview Styles */
+.cv-preview {
+  font-family: 'Georgia', serif;
+  background-color: #fff;
+  padding: 40px;
+  line-height: 1.6;
+  border: 1px solid #ccc;
+}
+
+.cv-preview h2 {
+  text-align: center;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.cv-preview section {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.cv-preview h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  text-decoration: underline;
+  color: #333;
+}
+
+.cv-preview p,
+.cv-preview li {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.cv-preview ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  form,
+  .cv-preview {
+    padding: 20px;
+    margin: 15px;
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+
+  button {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 24px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Optional: Add print support */
+@media print {
+  body {
+    background: white;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  form,
+  button {
+    display: none !important;
+  }
 
-.read-the-docs {
-  color: #888;
+  .cv-preview {
+    box-shadow: none;
+    margin: 0;
+    padding: 20px;
+    border: none;
+  }
 }
