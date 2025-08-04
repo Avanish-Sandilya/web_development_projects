@@ -1,6 +1,6 @@
 export default function Header(props){
     return(
-        <div>
+        <div class="header">
             <h1>
                 Memory Card
             </h1>
