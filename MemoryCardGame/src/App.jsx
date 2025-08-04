@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer';
+import Body from './components/Body';
 
 function App() {
   const [score, setScore] = useState(0);
@@ -10,6 +11,12 @@ function App() {
   return (
    <div>
     <Header score={score} highScore={highScore}/>
+     <Body
+        score={score}
+        setScore={setScore}
+        highScore={highScore}
+        setHighScore={setHighScore}
+      />
     <Footer/>
    </div>
   )
