@@ -57,7 +57,7 @@ export default function Body({ score, setScore, highScore, setHighScore }) {
   return (
     <div className="image-grid">
       {images.map((img, index) => (
-        <div key={index} style={{ textAlign: "center", margin: "10px" }}>
+        <div key={index} style={{ textAlign: "center", margin: "10px" }} class="image">
           <img
             src={img.src}
             alt={img.name}

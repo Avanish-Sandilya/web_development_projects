@@ -22,3 +22,21 @@
   padding-bottom: 1rem;
   margin-top: 5px;
 }
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 equal columns */
+  grid-template-rows: repeat(2, auto); /* 2 rows */
+  gap: 10px;
+  padding: 20px;
+  background-color: antiquewhite;
+}
+
+.image{
+  background-color: aqua;
+  border-radius: 1rem;
+}
+
+img{
+  padding-top: 1rem;
+}

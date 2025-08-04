@@ -9,7 +9,7 @@ function App() {
   const [highScore, setHighScore] = useState(0);
 
   return (
-   <div>
+   <div className="app">
     <Header score={score} highScore={highScore}/>
      <Body
         score={score}
