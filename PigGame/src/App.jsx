@@ -1,14 +1,12 @@
-
-import './App.css'
-import DieRoll from './components/dice'
+import DieRoll from './components/dice';
+import './App.css';
 
 function App() {
-
   return (
-      <div>
-       <DieRoll/>
-      </div>
-  )
+    <div>
+      <DieRoll />
+    </div>
+  );
 }
 
-export default App
+export default App;

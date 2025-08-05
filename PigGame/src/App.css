@@ -1,15 +1,108 @@
-.diceDiv{
-  display:flex ;
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main game container */
+.game-container {
+  width: 90%;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Heading */
+.game-container h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Player sections */
+.players {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.player {
+  flex: 1;
+  min-width: 45%;
+  background-color: #f3f3f3;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.player.active {
+  border: 3px solid #4caf50;
+  background-color: #e0f7e9;
+}
+
+.player h2 {
+  color: #4caf50;
+  margin-bottom: 0.5rem;
+}
+
+.player p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Dice and button section */
+.dice-section {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  font-weight: bolder;
+  gap: 1rem;
 }
 
-.dice{
-  margin: 1rem;
-  width: 10rem;
+/* Buttons */
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.rollValue{
-  font-size: 2rem;
+button:hover {
+  background-color: #43a047;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Dice image */
+.dice {
+  width: 100px;
+  height: 100px;
+}
+
+/* Roll value */
+.rollValue {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
 }
