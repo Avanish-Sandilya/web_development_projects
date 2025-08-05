@@ -6,79 +6,98 @@ import d4 from "../img/dice-4.png";
 import d5 from "../img/dice-5.png";
 import d6 from "../img/dice-6.png";
 
-function DieRoll() {
-  const diceFaces = [
-    { src: d1, value: 1 },
-    { src: d2, value: 2 },
-    { src: d3, value: 3 },
-    { src: d4, value: 4 },
-    { src: d5, value: 5 },
-    { src: d6, value: 6 },
-  ];
+const diceValues = [
+  { src: d1, value: 1 },
+  { src: d2, value: 2 },
+  { src: d3, value: 3 },
+  { src: d4, value: 4 },
+  { src: d5, value: 5 },
+  { src: d6, value: 6 },
+];
 
+function PigGame() {
   const [die, setDie] = useState(null);
-  const [currentPlayer, setCurrentPlayer] = useState(0); // 0 = Player 1, 1 = Player 2
+  const [currentScore, setCurrentScore] = useState(0);
   const [scores, setScores] = useState([0, 0]);
-  const [currentScores, setCurrentScores] = useState([0, 0]);
+  const [currentPlayer, setCurrentPlayer] = useState(0);
+  const [winner, setWinner] = useState(null);
 
   const handleRoll = () => {
-    const roll = diceFaces[Math.floor(Math.random() * diceFaces.length)];
-    setDie(roll);
+    if (winner !== null) return;
 
-    if (roll.value === 1) {
-      // Rolled 1: lose current score, switch player
-      const updatedCurr = [...currentScores];
-      updatedCurr[currentPlayer] = 0;
-      setCurrentScores(updatedCurr);
+    const randomDie = diceValues[Math.floor(Math.random() * diceValues.length)];
+    setDie(randomDie);
+
+    if (randomDie.value === 1) {
+      setCurrentScore(0);
       switchPlayer();
     } else {
-      // Add to current score
-      const updatedCurr = [...currentScores];
-      updatedCurr[currentPlayer] += roll.value;
-      setCurrentScores(updatedCurr);
+      setCurrentScore(prev => prev + randomDie.value);
     }
   };
 
   const handleHold = () => {
-    // Add current score to total, reset current score, switch player
-    const updatedScores = [...scores];
-    updatedScores[currentPlayer] += currentScores[currentPlayer];
-    setScores(updatedScores);
+    if (winner !== null) return;
 
-    const updatedCurr = [...currentScores];
-    updatedCurr[currentPlayer] = 0;
-    setCurrentScores(updatedCurr);
+    const newScores = [...scores];
+    newScores[currentPlayer] += currentScore;
+    setScores(newScores);
 
-    switchPlayer();
+    if (newScores[currentPlayer] >= 100) {
+      setWinner(currentPlayer);
+    } else {
+      setCurrentScore(0);
+      switchPlayer();
+    }
   };
 
   const switchPlayer = () => {
-    setCurrentPlayer((prev) => (prev === 0 ? 1 : 0));
+    setCurrentPlayer(prev => (prev === 0 ? 1 : 0));
+  };
+
+  const handleNewGame = () => {
+    setScores([0, 0]);
+    setCurrentScore(0);
+    setCurrentPlayer(0);
+    setWinner(null);
+    setDie(null);
   };
 
   return (
     <div className="game-container">
       <h1>Pig Dice Game</h1>
+
       <div className="players">
-        {[0, 1].map((player) => (
-          <div
-            key={player}
-            className={`player ${currentPlayer === player ? "active" : ""}`}
-          >
-            <h2>Player {player + 1}</h2>
-            <p>Total Score: {scores[player]}</p>
-            <p>Current Turn Score: {currentScores[player]}</p>
-          </div>
-        ))}
+        <div className={`player ${currentPlayer === 0 ? "active" : ""}`}>
+          <h2>Player 1 {winner === 0 && "🏆"}</h2>
+          <p>Total: {scores[0]}</p>
+          {currentPlayer === 0 && <p>Current: {currentScore}</p>}
+        </div>
+
+        <div className={`player ${currentPlayer === 1 ? "active" : ""}`}>
+          <h2>Player 2 {winner === 1 && "🏆"}</h2>
+          <p>Total: {scores[1]}</p>
+          {currentPlayer === 1 && <p>Current: {currentScore}</p>}
+        </div>
       </div>
 
       <div className="dice-section">
-        <button onClick={handleRoll}>Roll</button>
-        <button onClick={handleHold}>Hold</button>
+        <button onClick={handleRoll} disabled={winner !== null}>
+          Roll Die
+        </button>
+        <button onClick={handleHold} disabled={winner !== null}>
+          Hold
+        </button>
         {die && (
           <>
-            <img className="dice" src={die.src} alt={`Rolled ${die.value}`} />
-            <p>You rolled: {die.value}</p>
+            <img className="dice" src={die.src} alt={`Die face ${die.value}`} />
+            <p className="rollValue">Rolled: {die.value}</p>
+          </>
+        )}
+        {winner !== null && (
+          <>
+            <h2>🎉 Player {winner + 1} Wins!</h2>
+            <button onClick={handleNewGame}>New Game</button>
           </>
         )}
       </div>
@@ -86,4 +105,4 @@ function DieRoll() {
   );
 }
 
-export default DieRoll;
+export default PigGame;

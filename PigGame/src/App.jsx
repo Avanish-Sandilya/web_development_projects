@@ -1,10 +1,10 @@
-import DieRoll from './components/dice';
+import PigGame from './components/dice';
 import './App.css';
 
 function App() {
   return (
     <div>
-      <DieRoll />
+      <PigGame />
     </div>
   );
 }
