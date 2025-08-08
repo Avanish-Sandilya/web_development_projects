@@ -6,11 +6,13 @@ import App from "./App.jsx";
 import Profile from "./Profile.jsx";
 import Cricket from "./Cricket.jsx";
 import Football from "./Football.jsx";
+import ErrorPage from "./ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement:<ErrorPage/>
   },
   // {
   //   path: "profile",
