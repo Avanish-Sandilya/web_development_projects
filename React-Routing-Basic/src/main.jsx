@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
 import Profile from "./Profile.jsx";
+import Cricket from "./Cricket.jsx";
+import Football from "./Football.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "profile",
     element: <Profile />,
+    children: [
+      { path: "Cricket", element: <Cricket /> },
+      { path: "Football", element: <Football /> },
+    ],
   },
 ]);
 
