@@ -1,13 +1,12 @@
-  import App from "./App";
-  import Profile from "./Profile";
-  import ErrorPage from "./ErrorPage";
+import App from "./App";
+import Profile from "./Profile";
+import ErrorPage from "./ErrorPage";
 
-  const routes=[
-  
+const routes = [
   {
     path: "/",
     element: <App />,
-    errorElement:<ErrorPage/>
+    errorElement: <ErrorPage />,
   },
   // {
   //   path: "profile",
@@ -19,9 +18,9 @@
   // },
 
   {
-  path:"profile/:name",
-  element:<Profile/>
-  }
+    path: "profile/:name",
+    element: <Profile />,
+  },
 ];
 
-export {routes};
+export { routes };
