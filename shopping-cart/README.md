@@ -3,9 +3,9 @@ Purpose → Practice React fundamentals, state management, and styling.
 
 Features to include:
 
-Landing Page -> site details etc
+Home Page -> site details etc
 
-Home page → Show product list from API.
+Product page → Show product list from API.
 
 Product detail page → Show selected product info.
 
