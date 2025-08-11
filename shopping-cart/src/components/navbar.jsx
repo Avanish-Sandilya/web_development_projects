@@ -1,5 +1,0 @@
-function Navbar(){
-
-}
-
-export {Navbar};
