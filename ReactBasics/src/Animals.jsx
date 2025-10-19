@@ -1,5 +1,5 @@
 function ListItem(prop){
-    return <li>{prop.animal}</li>
+    return prop.animal.startsWith("C")? <li>{prop.animal}</li>:null;
 }
 
 function List(prop){
