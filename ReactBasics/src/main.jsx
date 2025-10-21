@@ -9,9 +9,9 @@ import BirdList from "./Birds.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Greeting />
     <Quote />
     <AnimalList />
     <BirdList />
+    <Greeting />
   </StrictMode>
 );
