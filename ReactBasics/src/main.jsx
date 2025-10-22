@@ -8,6 +8,7 @@ import AnimalList from "./Animals.jsx";
 import BirdList from "./Birds.jsx";
 import Todo from "./Todo.jsx";
 import Books from "./Books.jsx";
+import GetButtons from "./Button.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -17,5 +18,6 @@ createRoot(document.getElementById("root")).render(
     <BirdList />
     <Todo/>
     <Books/>
+    <GetButtons/>
   </StrictMode>
 );
