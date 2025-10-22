@@ -1,10 +1,10 @@
-function Button(props) {
+function Button({text,fontSize,color}) {
   const buttonStyle = {
-    color: props.color,
-    fontSize: props.fontSize + "px",
+    color: color,
+    fontSize: fontSize + "px",
   };
 
-  return <button style={buttonStyle}>{props.text}</button>;
+  return <button style={buttonStyle}>{text}</button>;
 }
 
 function GetButtons() {
