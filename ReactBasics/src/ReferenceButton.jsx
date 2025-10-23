@@ -16,7 +16,10 @@ function ReferenceButton(){
     }
 
     return(
+        <>
         <Button handleclick={()=>handleButtonClick('https://www.theodinproject.com')} text="Odin Project" color="White" fontsize={12} />
+        <Button handleclick={()=>handleButtonClick('https://www.google.com')} text="Odin Project" color="White" fontsize={12}/>
+            </>
     )
 }
 
