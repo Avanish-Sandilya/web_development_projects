@@ -10,6 +10,7 @@ import Todo from "./Todo.jsx";
 import Books from "./Books.jsx";
 import GetButtons from "./Button.jsx";
 import ReferenceButton from "./ReferenceButton.jsx";
+import Person from "./Person.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -21,5 +22,6 @@ createRoot(document.getElementById("root")).render(
     <Books/>
     <GetButtons/>
     <ReferenceButton/>
+    <Person name="John" age={12}/>
   </StrictMode>
 );
