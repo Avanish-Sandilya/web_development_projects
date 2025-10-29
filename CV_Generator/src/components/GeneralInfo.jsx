@@ -8,6 +8,7 @@ function GeneralInfo() {
   });
   const [isEditing, setIsEditing] = useState(true);
 
+  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
