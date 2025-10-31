@@ -28,20 +28,55 @@ function Experience() {
       <h2>Experience</h2>
       {isEditing ? (
         <form onSubmit={handleSubmit}>
-          <input name="company" placeholder="Company Name" value={formData.company} onChange={handleChange} />
-          <input name="position" placeholder="Position Title" value={formData.position} onChange={handleChange} />
-          <textarea name="responsibilities" placeholder="Main Responsibilities" value={formData.responsibilities} onChange={handleChange}></textarea>
-          <input name="from" placeholder="From" value={formData.from} onChange={handleChange} />
-          <input name="until" placeholder="Until" value={formData.until} onChange={handleChange} />
+          <input
+            name="company"
+            placeholder="Company Name"
+            value={formData.company}
+            onChange={handleChange}
+          />
+          <input
+            name="position"
+            placeholder="Position Title"
+            value={formData.position}
+            onChange={handleChange}
+          />
+          <textarea
+            name="responsibilities"
+            placeholder="Main Responsibilities"
+            value={formData.responsibilities}
+            onChange={handleChange}
+          ></textarea>
+          <input
+            name="from"
+            placeholder="From"
+            value={formData.from}
+            onChange={handleChange}
+          />
+          <input
+            name="until"
+            placeholder="Until"
+            value={formData.until}
+            onChange={handleChange}
+          />
           <button type="submit">Submit</button>
         </form>
       ) : (
         <div>
-          <p><strong>Company:</strong> {formData.company}</p>
-          <p><strong>Position:</strong> {formData.position}</p>
-          <p><strong>Responsibilities:</strong> {formData.responsibilities}</p>
-          <p><strong>From:</strong> {formData.from}</p>
-          <p><strong>Until:</strong> {formData.until}</p>
+          <p>
+            <strong>Company:</strong> {formData.company}
+          </p>
+          <p>
+            <strong>Position:</strong> {formData.position}
+          </p>
+          <p>
+            <strong>Responsibilities:</strong> {formData.responsibilities}
+          </p>
+          <p>
+            <strong>From:</strong> {formData.from}
+          </p>
+          <p>
+            <strong>Until:</strong> {formData.until}
+          </p>
           <button onClick={handleEdit}>Edit</button>
         </div>
       )}

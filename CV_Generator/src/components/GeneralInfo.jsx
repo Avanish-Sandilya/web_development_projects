@@ -8,7 +8,6 @@ function GeneralInfo() {
   });
   const [isEditing, setIsEditing] = useState(true);
 
-  
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -27,16 +26,37 @@ function GeneralInfo() {
       <h2>General Information</h2>
       {isEditing ? (
         <form onSubmit={handleSubmit}>
-          <input name="name" placeholder="Name" value={formData.name} onChange={handleChange} />
-          <input name="email" placeholder="Email" value={formData.email} onChange={handleChange} />
-          <input name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} />
+          <input
+            name="name"
+            placeholder="Name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+          <input
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          <input
+            name="phone"
+            placeholder="Phone"
+            value={formData.phone}
+            onChange={handleChange}
+          />
           <button type="submit">Submit</button>
         </form>
       ) : (
         <div>
-          <p><strong>Name:</strong> {formData.name}</p>
-          <p><strong>Email:</strong> {formData.email}</p>
-          <p><strong>Phone:</strong> {formData.phone}</p>
+          <p>
+            <strong>Name:</strong> {formData.name}
+          </p>
+          <p>
+            <strong>Email:</strong> {formData.email}
+          </p>
+          <p>
+            <strong>Phone:</strong> {formData.phone}
+          </p>
           <button onClick={handleEdit}>Edit</button>
         </div>
       )}
