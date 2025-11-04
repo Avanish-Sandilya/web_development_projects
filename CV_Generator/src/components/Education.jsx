@@ -6,6 +6,7 @@ function Education() {
     title: "",
     date: "",
   });
+  
   const [isEditing, setIsEditing] = useState(true);
 
   const handleChange = (e) => {
