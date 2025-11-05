@@ -6,6 +6,7 @@ function GeneralInfo() {
     email: "",
     phone: "",
   });
+  
   const [isEditing, setIsEditing] = useState(true);
 
   const handleChange = (e) => {
