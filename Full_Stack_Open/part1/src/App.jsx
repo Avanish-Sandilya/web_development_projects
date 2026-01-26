@@ -1,8 +1,8 @@
 
-const Hello = () => {
+const Hello = (props) => {
   return (
     <div>
-      <p>Greetings</p>
+      <p>Greetings {props.name} you are {2026-props.birthYear} years old</p>
     </div>
   )
 }
@@ -21,7 +21,7 @@ const App = () => {
       <p>
         {a} plus {b} is {a + b}
       </p>
-      <Hello/>
+      <Hello name='Raju' birthYear={2000}/>
     </div>
   )
 }
