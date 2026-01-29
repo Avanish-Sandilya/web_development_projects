@@ -1,5 +1,33 @@
 import { useState } from 'react'
 
+
+const ShowAverage = ({ good, neutral, bad }) => {
+  const total = good + neutral + bad
+
+  if (total === 0) {
+    return <p>Average: 0</p>
+  }
+
+  const finalTotal = (good - bad) / total;
+
+  return (
+    <p>Average: {finalTotal.toFixed(2)*10}/10</p>
+  )
+}
+
+const PositivePercentage = (props)=>{
+  const positiveTotal = props.total-(props.neutral+props.negative);
+  const percentage = (positiveTotal/props.total)*100;
+
+  if (props.total === 0) {
+    return <p>Positive percentage: 0</p>
+  }
+
+  return(<>Positive percentage:{percentage.toFixed(2)}%</>)
+
+}
+
+
 function App() {
 
   const [goodCount, setGoodCount]=useState(0);
@@ -18,6 +46,8 @@ function App() {
     setBadCount(badCount+1);
   }
 
+  
+
   return(
     
     <>
@@ -29,6 +59,8 @@ function App() {
     <p>Good:{goodCount}</p>
     <p>Neutral:{neutralCount}</p>
     <p>Bad:{badCount}</p>
+    <ShowAverage good={goodCount} neutral={neutralCount} bad={badCount}/>
+    <PositivePercentage total ={goodCount+badCount+neutralCount} negative={badCount} neutral={neutralCount}/>
     </>
   )
 }
