@@ -1,0 +1,24 @@
+.padContainer {
+  display: grid;
+  grid-template-columns: repeat(16, 40px);
+  grid-template-rows: repeat(16, 40px);
+  gap: 2px;
+  padding-left: 20%;
+}
+
+.square {
+  width: 40px;
+  height: 40px;
+  background-color: grey;
+  transition: background-color 0.2s ease;
+}
+
+.square.black {
+  background-color: black;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
