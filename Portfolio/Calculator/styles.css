@@ -1,0 +1,30 @@
+.calculatorBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15%;
+}
+
+#screen{
+    width: 100%;
+    height: 20%;
+}
+.numberButton{
+    width: 50px;
+    height: 50px;
+}
+
+.opButton{
+    width: 50px;
+    height: 50px;
+}
+
+.equalButton{
+    width: 50px;
+    height: 50px;
+}
+
+.reset{
+    width: 50px;
+    height: 50px;
+}
