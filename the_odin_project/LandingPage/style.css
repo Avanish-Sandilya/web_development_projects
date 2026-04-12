@@ -1,0 +1,144 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= HEADER ================= */
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f2937;
+    color: white;
+    padding: 15px 40px;
+}
+
+.links_container {
+    display: flex;
+    gap: 20px;
+}
+
+/* ================= HERO SECTION ================= */
+
+.pageInfo_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    background-color: #1f2937;
+    color: white;
+}
+
+.pageInfo_description_container {
+    max-width: 400px;
+}
+
+.pageInfo_description_container h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.pageInfo_description_container p {
+    margin-bottom: 15px;
+    color: #d1d5db;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #3b82f6;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Image box */
+.main_image_container {
+    width: 300px;
+    height: 150px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================= FEATURES ================= */
+
+.page_features_container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px;
+}
+
+.feature_image {
+    text-align: center;
+    max-width: 150px;
+}
+
+.feature_image img {
+    width: 100%;
+    height: 100px;
+    background-color: lightgray;
+    border: 2px solid #3b82f6;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* ================= TESTIMONIAL ================= */
+
+.user_testimony_container {
+    background-color: #e5e7eb;
+    padding: 60px 80px;
+    font-style: italic;
+}
+
+.quote {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.author {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+}
+
+/* ================= CTA / FOOTER ================= */
+
+.footer_container {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.action_button_container {
+    background-color: #3b82f6;
+    color: white;
+    padding: 30px 50px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    width: 70%;
+}
+
+.action_button_container button {
+    background-color: white;
+    color: #3b82f6;
+    font-weight: bold;
+}
